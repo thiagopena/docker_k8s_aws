@@ -1,6 +1,6 @@
 FROM docker:dind
 
-RUN apk add --no-cache gcc make python3-dev musl-dev && \
+RUN apk add --no-cache gcc make python3-dev musl-dev libffi-dev && \
     apk add --no-cache python3 && \
     if [ ! -e /usr/bin/python ]; then ln -sf python3 /usr/bin/python ; fi && \
     python3 -m ensurepip && \
